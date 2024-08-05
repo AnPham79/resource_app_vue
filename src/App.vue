@@ -1,50 +1,22 @@
 <template>
   <div>
-    <StoreResource :resources="storeResource"></StoreResource>
+    <TheHeader title="RememberMe"></TheHeader>
+    <TheResource :resources="storeResource"></TheResource>
   </div>
 </template>
 
 <script>
-import StoreResource from './components/StoreResouce.vue';
+import TheHeader from './components/layouts/TheHeader.vue';
+import TheResource from './components/learnResource/TheResource.vue';
 
 export default {
   components: {
-    StoreResource
+    TheHeader,
+    TheResource
   },
   data() {
     return {
-      storeResource: [
-        {
-          id: 1,
-          title: "Learn JavaScript",
-          description: "An online course to learn JavaScript from basics to advanced topics.",
-          link: "https://www.learnjavascript.com"
-        },
-        {
-          id: 2,
-          title: "Master PHP",
-          description: "A comprehensive guide to becoming a PHP master, including advanced techniques.",
-          link: "https://www.masterphp.com"
-        },
-        {
-          id: 3,
-          title: "CSS Tricks",
-          description: "A resource for learning and mastering CSS with practical examples and tips.",
-          link: "https://www.csstricks.com"
-        },
-        {
-          id: 4,
-          title: "Laravel for Beginners",
-          description: "An introduction to Laravel framework for PHP developers, with hands-on projects.",
-          link: "https://www.laravelforbeginners.com"
-        },
-        {
-          id: 5,
-          title: "Vue.js Essentials",
-          description: "Learn the essentials of Vue.js, a popular JavaScript framework for building user interfaces.",
-          link: "https://www.vuejsessentials.com"
-        }
-      ]
+      
     }
   }
 }
