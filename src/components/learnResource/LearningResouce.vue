@@ -3,8 +3,7 @@
     <base-card>
       <header>
         <h3>{{ title }}</h3>
-        <!-- <base-button @click="deleteResource">Delete</base-button> -->
-        <base-button mode="flat">Delete</base-button>
+        <base-button mode="flat" @click="destroyResource(id)">Delete</base-button>
       </header>
       <p>{{ description }}</p>
       <nav>
@@ -18,16 +17,8 @@
 
 export default {
   name: 'LearningResource',
-  props: {
-    title: String,
-    description: String,
-    link: String
-  },
-  methods: {
-    deleteResource() {
-      this.$emit('delete');
-    }
-  }
+  inject: ['destroyResource'],
+  props: ['id', 'title', 'description', 'link'],
 }
 </script>
 
